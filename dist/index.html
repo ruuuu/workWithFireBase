@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/reset-bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="./js/main.js" defer></script> <!-- main.js(минимизированный файл)  файл из папки dist-->
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row pt-5 mb-5">
+            <div class="col col-12 col-md-6 col-xl-4 offset-md-3 offset-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col col-12">
+                                <h5 class="card-title">Добавление товара</h5>
+                            </div>
+                            <div class="col col-12 mb-3">
+                                <label for="name" class="form-label">Введите название</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="col col-12 mb-3">
+                                <label for="number" class="form-label">Введите цену</label>
+                                <input type="number" class="form-control" id="number">
+                            </div>
+                            <div class="col col-12">
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-success">Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Название</th>
+                                <th scope="col">Цена</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="table-body">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Молоток</td>
+                                <td>1200 ₽</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-danger btn-sm">Удалить</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Кофе</td>
+                                <td>600 ₽</td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-danger btn-sm">Удалить</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--
+    build": "webpack --mode=production", // будет продакшен сборка в папке dist/js/main.js ( минифицированный  вид)
+    "watch": "webpack --watch --mode=development",
+    "start": "webpack serve --mode=development --open", // "npm run start"  для разработки, запутсится дев сервер от вебпак
+    "server": "json-server --watch db.json --port=3001"
+-->
